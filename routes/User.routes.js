@@ -39,6 +39,7 @@ router.post('./register', async (req, res) => {
     } else if (!name || !email || !password) {
         return res.status(400).json({ msg: 'Todos os campos são obrigatórios'});
 
+        // criando novo usuário
     } else {
         const salt = await bcrypt.genSalt(10); 
         password = await bcrypt.hash(password, salt);
