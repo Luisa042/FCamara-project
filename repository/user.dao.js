@@ -1,4 +1,4 @@
-const User = require('../models/User');
+const User = require('../models/User.model');
 const bcrypt = require('bcryptjs');
 
 class UserRepository {
@@ -6,8 +6,10 @@ class UserRepository {
         this.user = UserModel;
     }
 
-    register = async (user) { // payload
+    register = async (user) => { 
+            // payload
         const {name, email, password} = user;
+        console.log(user);
 
         try {
             const existsUser = await this.user.findOne({name});
