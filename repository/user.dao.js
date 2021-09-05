@@ -56,6 +56,17 @@ class UserRepository {
             throw new Error(error);
         }
     }
+
+    findUser = async (email) => {
+        try {
+            const user = await this.user.findOne({ email });
+            return user;
+        } catch (error) {
+            throw new Error('Usuário e email não correspondem com usuário e email registrados');
+        }
+    }
+
+    
 }
 
 module.exports = new UserRepository(User);
