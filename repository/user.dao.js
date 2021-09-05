@@ -66,6 +66,17 @@ class UserRepository {
         }
     }
 
+    updateUser = async (id, user) => {
+        try {
+            const updatedUser = await this.user.findByIdAndUpdate(id, user, {
+                new: true
+            });
+            return updatedUser;
+        } catch (error) {
+            throw new Error();
+        }
+    }
+
     
 }
 
