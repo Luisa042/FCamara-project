@@ -9,7 +9,6 @@ class UserRepository {
     register = async (user) => { 
             // payload
         const {name, email, password} = user;
-        console.log(user);
 
         try {
             const existsUser = await this.user.findOne({name});
@@ -43,8 +42,13 @@ class UserRepository {
             // criando novo usuário
             } else {
                 const salt = await bcrypt.genSalt(10);
-                password = await bcrypt.hash(password, salt);
-                let newUser = await this.user.create({name, email, password});
+                const passwordhash = await bcrypt.hash(password, salt);
+                let newUser = await this.user.create({
+                    name, 
+                    email, 
+                    password: passwordhash
+                });
+                console.log(newUser)
                 return ({
                     name: newUser.name,
                     email: newWuser.email,

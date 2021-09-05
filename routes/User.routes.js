@@ -2,7 +2,7 @@ const { Router } = require('express');
 const userRepo = require('../repository/user.dao');
 const router = Router();
 
-router.post('./register', async (req, res) => {
+router.post('/register', async (req, res) => {
     try {
         const user = await userRepo.register(req.body);
         res.status(201).json(user);
