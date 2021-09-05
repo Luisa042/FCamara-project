@@ -77,7 +77,14 @@ class UserRepository {
         }
     }
 
-    
+    deleteUser = async (id) => {
+        try {
+            const deletedUser = await this.user.findByIdAndDelete(id);
+            return deletedUser;
+        } catch (error) {
+            throw new Error();
+        }
+    }
 }
 
 module.exports = new UserRepository(User);
