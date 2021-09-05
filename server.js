@@ -1,8 +1,9 @@
-const server = require('./app');
+const http = require('http');
 
-const port = process.env.PORT ? parseInt(process.env.PORT) : 5000;
-const hostname = process.env.HOSTNAME || '127.0.0.1';
+const app = require('./app');
 
-server.listen(port, () => {
-  console.log(`Servidor ouvindo em ${hostname}:${port}`);
+const server = http.createServer(app);
+
+server.listen(process.env.PORT, () => {
+  console.log(`Servidor ouvindo na porta ${process.env.PORT}`);
 });

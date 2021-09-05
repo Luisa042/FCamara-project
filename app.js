@@ -15,9 +15,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 
 // Rotas
-app.get('/', (req, res) => {
-  res.send('ok');
-});
+const user = require('./routes/user.routes');
+
+app.use('/', user);
 
 // Exportar o app
 module.exports = app;
