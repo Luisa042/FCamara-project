@@ -5,7 +5,6 @@ const jwt = require('jsonwebtoken');
 const router = Router();
 
 router.post('./register', async (req, res) => {
-
     try {
 
         // destructuring do req.body
@@ -51,9 +50,8 @@ router.post('./register', async (req, res) => {
         return res.status(200).json({
             name: newUser.name,
             email: newUser.email,
-            password: newUser.password,
             id: newUser.id
-        })
+        });
     }
 
         
