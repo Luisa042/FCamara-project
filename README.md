@@ -7,9 +7,7 @@
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/danielafarias/FCamara-Back?style=for-the-badge)
 ![Github Watchers](https://img.shields.io/github/watchers/danielafarias/FCamara-Back?style=for-the-badge)
 
-
 ![FCamara-Back](https://blog.fcamara.com.br/wp-content/uploads/2019/10/Logotipo-FCamara.png)
-
 
 > FCamara Back é a parte de Back-end do Projeto de Programa de Formação da FCamara. Desenvolvido com Node, Express e MongoDB.
 
@@ -24,9 +22,9 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 
-* Você instalou a versão mais recente de `<Linguagens>`
-* Você adicionou as seguintes bibliotecas  `<Bibliotecas>`.
-* Você leu o `<passo_a_passo_de_intalação_do_projeto>`.
+- Você instalou a versão mais recente de `<Linguagens>`
+- Você adicionou as seguintes bibliotecas `<Bibliotecas>`.
+- Você leu o `<passo_a_passo_de_intalação_do_projeto>`.
 
 ## 🌞 Instalando FCamara Back
 
@@ -37,14 +35,17 @@ Para instalar o FCamara Back, siga estas etapas:
 ```
 
 Clone o projeto:
+
 ```
 <git clone https://github.com/danielafarias/FCamara-Back.git>
 ```
 
 Em seguida, adicione as bibliotecas e dependências necessárias:
+
 ```
 <cd FCamara-Back>
 ```
+
 ```
 <etc>
 ```
@@ -58,20 +59,6 @@ Para usar FCamara Back:
 ```
 
 Voilà!
-
-
-
-## ⛺ Contribuindo para FCamara Back
-
-Para contribuir com FCamara Back, siga estas etapas:
-
-1. Bifurque este repositório.
-2. Crie um branch: `git checkout -b <fcamara_seu_nome>`.
-3. Faça suas alterações e confirme-as: `git commit -m '<sua_mensagem_de_commit>'`
-4. Envie para o branch original: `git push origin <master> / <https://github.com/danielafarias/FCamara-Back>`
-5. Crie a solicitação de pull.
-
-Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 ## 🧚 Colaboradores
 

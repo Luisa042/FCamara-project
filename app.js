@@ -3,6 +3,8 @@ require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const admin = require('sriracha');
+const swaggerUI = require('swagger-ui-express');
+const swaggerDocs = require('./openapi.json');
 
 // Connect Database
 require('./config/db.config');
@@ -15,8 +17,11 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(cors());
 
-// adiciona painel admin na rota '/admin'
+// adiciona painel admin
 app.use('/admin', admin());
+
+// adiciona documentação
+app.use('/docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
 require('./controllers/authController')(app);
 
