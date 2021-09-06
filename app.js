@@ -4,7 +4,7 @@ const express = require('express');
 const cors = require('cors');
 const admin = require('sriracha');
 const swaggerUI = require('swagger-ui-express');
-const swaggerDocs = require('./openapi.json');
+const swaggerDocs = require('./swagger.json');
 
 // Connect Database
 require('./config/db.config');
@@ -17,10 +17,10 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(cors());
 
-// adiciona painel admin
+// painel admin
 app.use('/admin', admin());
 
-// adiciona documentação
+// documentação
 app.use('/docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
 require('./controllers/authController')(app);
