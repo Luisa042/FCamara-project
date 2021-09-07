@@ -19,20 +19,17 @@ class UserRepository {
             // validando email da fcamara
             if (!email.match(validEmail)) {
                 throw new Error('Email não permitido, tente novamente usando @fcamara.com.br');
-            }
-
+            
             // validando senha segura
-            if (!password.match(validPass)) {
+            } else if (!password.match(validPass)) {
                 throw new Error('Por motivos de segurança, sua senha deve conter pelo menos 6 caracteres, 1 letra maiúscula, 1 símbolo e 1 número');
-            }
-
+             
             // verificando se usuário já está registrado
-            if (existsUser) {
+            } else if (existsUser) {
                 throw new Error('Este usuário já está registrado');
-            }
-
+            
             // verificando se o email já está registrado
-            if (existsEmail) {
+            } else if (existsEmail) {
                 throw new Error('Este email já está registrado');
 
             // verificando se todos os campos estão preenchidos
@@ -41,14 +38,13 @@ class UserRepository {
 
             // criando novo usuário
             } else {
-                const salt = await bcrypt.genSalt(10);
-                const passwordhash = await bcrypt.hash(password, salt);
-                let newUser = await this.user.create({
+                const salt = bcrypt.genSaltSync(10);
+                const passwordHash = bcrypt.hashSync(password, salt);
+                const newUser = await this.user.create({
                     name, 
                     email, 
-                    password: passwordhash
+                    passwordHash
                 });
-                console.log(newUser)
                 return ({
                     name: newUser.name,
                     email: newWuser.email,

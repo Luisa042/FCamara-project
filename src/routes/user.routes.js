@@ -51,6 +51,18 @@ router.post('/login', async (req, res) => {
     }
 });
 
+router.patch('/edit/:id', async (req, res) => {
+    const { name, email, password } = req.body;
+    const { id } = req.params;
+
+    try {
+        const user = await userRepo.updateUser(id, { name, email, password });
+        res.status(201).json(user);
+    } catch (error) {
+        res.status(500).json(error.message);
+    }
+});
+
 
 
 module.exports = router;
