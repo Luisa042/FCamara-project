@@ -63,6 +63,17 @@ router.patch('/edit/:id', async (req, res) => {
     }
 });
 
+router.delete('/delete/:id', async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        await userRepo.deleteUser(id);
+        res.status(200).json({ msg: 'Usuário apagado com sucesso!' });
+    } catch (error) {
+        res.status(500).json(error.message);
+    }
+});
+
 
 
 module.exports = router;
