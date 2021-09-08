@@ -12,8 +12,14 @@ const scheduleSchema = new Schema({
     },
     date: {
         type: Date,
-        required: true
-    }
+        required: true,
+        status: {
+            type: 'String',
+            enum: ['disponível', 'indisponível'],
+            default: 'disponível',
+            required: true
+        }
+    },
 },
     {
         timestamps: true
