@@ -1,10 +1,16 @@
 const { Schema, model } = require('mongoose');
 
 const scheduleSchema = new Schema({
-    localId: {
-        type: Schema.Types.ObjectId,
-        ref: 'Local',
-        required: true
+    local: {
+        address: {
+            city: 'String',
+            UF: 'String',
+            required: true
+        },
+        geolocation: {
+            type: 'String',
+            coordinates: 'Array'
+        }
     },
     userId: {
         type: Schema.Types.ObjectId,
