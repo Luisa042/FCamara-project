@@ -17,8 +17,10 @@ app.use(cors());
 // Rotas
 
 const user = require('./routes/user.routes');
+const schedules = require('./routes/schedule.routes');
 
 app.use('/', user);
+app.use('/schedules', schedules);
 
 // Exportar o app
 module.exports = app;

@@ -2,7 +2,7 @@ const { Router } = require('express');
 const scheduleRepo = require('../repository/schedule.dao');
 const router = Router();
 
-router.get('/schedules', async (req, res) => {
+router.get('/listAll', async (req, res) => {
     try {
         const schedules = await scheduleRepo.listAllAppointments();
         res.status(200).json(schedules);
@@ -11,7 +11,7 @@ router.get('/schedules', async (req, res) => {
     }
 });
 
-router.get('/schedules/:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
     const { id } = req.params;
     try {
         const oneSchedule = await scheduleRepo.listOneAppointment(id);
@@ -21,7 +21,7 @@ router.get('/schedules/:id', async (req, res) => {
     }
 });
 
-router.post('/schedules', async (req, res) => {
+router.post('/appointment', async (req, res) => {
     const schedule = req.body;
     try {
         const appointment = await scheduleRepo.makeAppointment(schedule);
@@ -31,7 +31,7 @@ router.post('/schedules', async (req, res) => {
     }
 });
 
-router.delete('/schedules/:id', async (req, res) => {
+router.delete('/delete/:id', async (req, res) => {
     const { id } = req.params;
     try {
         await scheduleRepo.cancelAppointment(id);
