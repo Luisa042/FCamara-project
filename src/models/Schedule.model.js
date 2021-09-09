@@ -1,17 +1,11 @@
 const { Schema, model } = require('mongoose');
 
 const scheduleSchema = new Schema({
-    local: {
-        address: {
-            city: 'String',
+    city: {
+            type: 'String',
             UF: 'String',
             required: true
         },
-        geolocation: {
-            type: 'String',
-            coordinates: 'Array'
-        }
-    },
     userId: {
         type: Schema.Types.ObjectId,
         ref: 'User'
@@ -19,12 +13,6 @@ const scheduleSchema = new Schema({
     date: {
         type: Date,
         required: true,
-        status: {
-            type: 'String',
-            enum: ['disponível', 'indisponível'],
-            default: 'disponível',
-            required: true
-        }
     },
 },
     {
