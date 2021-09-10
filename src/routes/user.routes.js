@@ -1,6 +1,6 @@
 const { Router } = require('express');
 const userRepo = require('../repository/user.dao');
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcryptjs/dist/bcrypt');
 const jwt = require('jsonwebtoken');
 const router = Router();
 
@@ -23,7 +23,7 @@ router.post('/login', async (req, res) => {
             return res.status(400).json();
         }
         
-        const compareHash = bcrypt.compareSync(password, user.password);
+        const compareHash = bcrypt.compareSync(password, user.passwordHash);
 
         
         if (!compareHash) {
@@ -45,7 +45,6 @@ router.post('/login', async (req, res) => {
             );
             
             res.status(200).json({ payload, token });
-            
     } catch (error) {
         res.status(500).json(error);
     }

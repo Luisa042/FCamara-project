@@ -1,5 +1,5 @@
 const User = require('../models/User.model');
-const bcrypt = require('bcryptjs');
+const bcrypt = require('bcryptjs/dist/bcrypt');
 
 class UserRepository {
     constructor(UserModel) {
@@ -47,7 +47,7 @@ class UserRepository {
                 });
                 return ({
                     name: newUser.name,
-                    email: newWuser.email,
+                    email: newUser.email,
                     id: newUser.id
                 });
             }
