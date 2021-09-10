@@ -1,14 +1,20 @@
 {
   "swagger": "2.0",
   "info": {
+    "title": "Sistema de Agendamento",
     "description": "Este projeto faz parte do sistema de agendamento desenvolvido durante o hackathon do Programa de Formação do Grupo FCamara.",
     "version": "1.0.0",
-    "title": "Sistema de Agendamento",
     "license": {
       "name": "MIT",
       "url": "https://opensource.org/licenses/MIT"
     }
   },
+  "host": [
+    {
+      "url": "http://localhost:5000",
+      "description": "development server"
+    }
+  ],
   "tags": [
     {
       "name": "user",
@@ -326,7 +332,8 @@
           "type": "string"
         },
         "password": {
-          "type": "string"
+          "type": "string",
+          "format": "password"
         }
       }
     },
@@ -345,7 +352,8 @@
           "type": "string"
         },
         "date": {
-          "type": "string"
+          "type": "string",
+          "format": "date"
         }
       }
     }
