@@ -14,15 +14,14 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(cors());
 
-// Rotas publicas
-
+// Rotas
 const user = require('./routes/user.routes');
 const schedules = require('./routes/schedule.routes');
 
+// Rotas publicas
 app.use('/', user);
 
 // Rotas privadas que precisam de jwt (token)
-
 const authMiddleware = require('./middlewares/auth.middleware');
 
 app.use(authMiddleware);
