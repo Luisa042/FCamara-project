@@ -1,4 +1,6 @@
-# FCAMARA-BACK
+# Sistema de agendamento
+
+## FCAMARA-BACK
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/danielafarias/FCamara-Back?style=for-the-badge)
 ![GitHub language count](https://img.shields.io/github/languages/count/danielafarias/FCamara-Back?style=for-the-badge)
@@ -7,75 +9,57 @@
 ![GitHub Last Commit](https://img.shields.io/github/last-commit/danielafarias/FCamara-Back?style=for-the-badge)
 ![Github Watchers](https://img.shields.io/github/watchers/danielafarias/FCamara-Back?style=for-the-badge)
 
-
 ![FCamara-Back](https://blog.fcamara.com.br/wp-content/uploads/2019/10/Logotipo-FCamara.png)
-
 
 > FCamara Back é a parte de Back-end do Projeto de Programa de Formação da FCamara. Desenvolvido com Node, Express e MongoDB.
 
-### 🧡 Ajustes e melhorias
+### 🍊 Ajustes e melhorias
 
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
 - [x] Projeto inicializado
+- [x] Rotas de usuário criadas
+- [x] Rotas de agendamento criadas
 - [ ] Projeto Finalizado
 
-## 🍊 Pré-requisitos
-
-Antes de começar, verifique se você atendeu aos seguintes requisitos:
-
-* Você instalou a versão mais recente de `<Linguagens>`
-* Você adicionou as seguintes bibliotecas  `<Bibliotecas>`.
-* Você leu o `<passo_a_passo_de_intalação_do_projeto>`.
-
-## 🌞 Instalando FCamara Back
+## 🍊 Instalando FCamara Back
 
 Para instalar o FCamara Back, siga estas etapas:
 
-```
-<install>
-```
+- Clone o projeto:
 
-Clone o projeto:
-```
-<git clone https://github.com/danielafarias/FCamara-Back.git>
-```
+  ```
+  $ git clone https://github.com/Thiarhes/FCamara-project.git
+  ```
 
-Em seguida, adicione as bibliotecas e dependências necessárias:
-```
-<cd FCamara-Back>
-```
-```
-<etc>
-```
+- Em seguida, adicione as bibliotecas e dependências necessárias:
 
-## 🦊 Usando FCamara Back
+  ```
+  $ cd FCamara-project
+  $ npm i
+  ```
 
-Para usar FCamara Back:
+## 🍊 Usando FCamara Back
 
-```
-<start>
-```
+Para usar FCamara Back, execute `npm start` na raiz do projeto.
 
 Voilà!
 
-
-
-## ⛺ Contribuindo para FCamara Back
+## 🧡 Contribuindo para FCamara Back
 
 Para contribuir com FCamara Back, siga estas etapas:
 
 1. Bifurque este repositório.
 2. Crie um branch: `git checkout -b <fcamara_seu_nome>`.
 3. Faça suas alterações e confirme-as: `git commit -m '<sua_mensagem_de_commit>'`
-4. Envie para o branch original: `git push origin <master> / <https://github.com/danielafarias/FCamara-Back>`
+4. Envie para o branch original: `git push origin main https://github.com/Thiarhes/FCamara-project.git`
 5. Crie a solicitação de pull.
 
 Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
 ## 🧚 Colaboradores
 
-Seguintes pessoas que contribuíram para este projeto:
+As seguintes pessoas contribuíram para este projeto:
 
 <table>
   <tr>
@@ -89,7 +73,7 @@ Seguintes pessoas que contribuíram para este projeto:
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://avatars.githubusercontent.com/u/85790391?v=4" width="100px;" alt="Foto da Daniela Farias no GitHub"/><br>
+        <img src="https://avatars.githubusercontent.com/u/85790391?v=4" width="100px;" alt="Foto da Luisa no GitHub"/><br>
         <sub>
           <b>Luisa Santos</b>
         </sub>
@@ -113,22 +97,6 @@ Seguintes pessoas que contribuíram para este projeto:
     </td>
     </tr>
     <tr>
-    <td align="center">
-      <a href="#">
-        <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQHGs6KiEjprnw/company-logo_200_200/0/1625519055911?e=2159024400&v=beta&t=-5EtDJEOz1kIe-z7VC3ZlW1E6SiQ79KMdxk7XWjiMFg" width="100px;" alt="Erica!"/><br>
-        <sub>
-          <b>Erica Neres</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="#">
-        <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQHGs6KiEjprnw/company-logo_200_200/0/1625519055911?e=2159024400&v=beta&t=-5EtDJEOz1kIe-z7VC3ZlW1E6SiQ79KMdxk7XWjiMFg" width="100px;" alt="Sabrina"/><br>
-        <sub>
-          <b>Sabrina Anselmo</b>
-        </sub>
-      </a>
-    </td>
     <td align="center">
       <a href="#">
         <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQHGs6KiEjprnw/company-logo_200_200/0/1625519055911?e=2159024400&v=beta&t=-5EtDJEOz1kIe-z7VC3ZlW1E6SiQ79KMdxk7XWjiMFg" width="100px;" alt="FCamara!"/><br>
