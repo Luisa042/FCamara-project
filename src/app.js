@@ -24,11 +24,17 @@ app.use('/admin', admin());
 app.use('/docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 
 // Rotas
-
 const user = require('./routes/user.routes');
 const schedules = require('./routes/schedule.routes');
 
+// Rotas publicas
 app.use('/', user);
+
+// Rotas privadas que precisam de jwt (token)
+const authMiddleware = require('./middlewares/auth.middleware');
+
+app.use(authMiddleware);
+
 app.use('/schedules', schedules);
 
 // Exportar o app
