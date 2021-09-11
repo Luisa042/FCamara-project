@@ -11,8 +11,7 @@
   },
   "host": [
     {
-      "url": "http://localhost:5000",
-      "description": "development server"
+      "url": "http://localhost:5000"
     }
   ],
   "tags": [
@@ -53,7 +52,7 @@
       }
     },
     "/login": {
-      "get": {
+      "post": {
         "tags": ["user"],
         "summary": "Loga usuário no sistema.",
         "description": "",

@@ -2,20 +2,21 @@
   "name": "projeto_fcamara",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "src/app.js",
   "scripts": {
-    "start": "nodemon src/server.js"
+    "start": "node .",
+    "dev": "nodemon ."
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danielafarias/FCamara-Back.git"
+    "url": "git+https://github.com/thiarhes/FCamara-project.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/danielafarias/FCamara-Back/issues"
+    "url": "https://github.com/thiarhes/FCamara-project/issues"
   },
-  "homepage": "https://github.com/danielafarias/FCamara-Back#readme",
+  "homepage": "https://github.com/thiarhes/FCamara-project#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
