@@ -6,7 +6,6 @@ router.get('/listAll', async (req, res) => {
     try {
         const schedules = await scheduleRepo.listAllAppointments();
         res.status(200).json(schedules);
-        console.log(schedules)
     } catch (error) {
         res.status(500).json(error.message);
     }

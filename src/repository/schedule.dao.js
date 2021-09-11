@@ -28,7 +28,7 @@ class ScheduleRepository {
 
         try {
                 const appointmentDate = new Date(date);
-
+                
                 const newAppointment = await this.schedule.create({
                     city,
                     user: userId,
@@ -42,7 +42,7 @@ class ScheduleRepository {
                 });
                 
             } catch (error) {
-            throw new Error(error);
+            throw new Error(error.message);
         }
     };
 
