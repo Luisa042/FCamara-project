@@ -30,15 +30,15 @@ class ScheduleRepository {
                 const appointmentDate = new Date(date);
                 
                 const newAppointment = await this.schedule.create({
-                    city,
-                    user: userId,
-                    date: appointmentDate
+                  city,
+                  userId,
+                  date: appointmentDate
                 });
                 return ({
-                    city: newAppointment.city,
-                    user: newAppointment.user,
-                    date: newAppointment.date,
-                    id: newAppointment.id
+                  city: newAppointment.city,
+                  userId: newAppointment.user_id,
+                  date: newAppointment.date,
+                  id: newAppointment.id
                 });
                 
             } catch (error) {
