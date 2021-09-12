@@ -37,8 +37,5 @@ app.use(authMiddleware);
 
 app.use('/schedules', schedules);
 
-const port = process.env.PORT || 5000;
-
-app.listen(port, () => {
-  console.log(`Servidor ouvindo na porta ${port}`);
-});
+// exportar o app
+module.exports = app;

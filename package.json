@@ -2,7 +2,7 @@
   "name": "projeto_fcamara",
   "version": "1.0.0",
   "description": "",
-  "main": "src/app.js",
+  "main": "server.js",
   "scripts": {
     "start": "node .",
     "dev": "nodemon ."
