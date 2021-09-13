@@ -1,9 +1,7 @@
-const http = require('http');
+const server = require('./src/app');
 
-const app = require('./src/app');
+const port = process.env.PORT || 5000;
 
-const server = http.createServer(app);
-
-server.listen(process.env.PORT, () => {
-    console.log(`Servidor ouvindo na porta ${process.env.PORT}`);
+server.listen(port, () => {
+  console.log(`Servidor ouvindo na porta ${port}`);
 });
