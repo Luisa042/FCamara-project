@@ -11,7 +11,7 @@
   },
   "host": [
     {
-      "url": "http://localhost:5000"
+      "url": "http://fcamara-project-api.herokuapp.com/"
     }
   ],
   "tags": [
@@ -24,7 +24,7 @@
       "description": "Referente aos agendamentos"
     }
   ],
-  "schemes": ["https", "http"],
+  "schemes": ["http"],
   "paths": {
     "/register": {
       "post": {
@@ -60,9 +60,9 @@
         "produces": ["application/json"],
         "parameters": [
           {
-            "name": "username",
+            "name": "email",
             "in": "query",
-            "description": "The user /email for login",
+            "description": "The user email for login",
             "required": true,
             "type": "string"
           },
