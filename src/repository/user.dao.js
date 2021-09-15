@@ -25,7 +25,9 @@ class UserRepository {
 
         // validando senha segura
       } else if (!password.match(validPass)) {
-        return res.status(400).json({ error: 'Por motivos de segurança, sua senha deve conter pelo menos 6 caracteres, 1 letra maiúscula, 1 símbolo e 1 número' });
+        throw new Error(
+          'Por motivos de segurança, sua senha deve conter pelo menos 6 caracteres, 1 letra maiúscula, 1 símbolo e 1 número'
+        );
 
         // verificando se usuário já está registrado
       } else if (existsUser) {
